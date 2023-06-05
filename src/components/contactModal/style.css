@@ -1,0 +1,65 @@
+.backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+	z-index: 2;
+}
+
+.sidebar__container {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 450px;
+	padding: 20vh 3.1rem 3.1rem;
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	background-color: #fff;
+}
+
+.sidebar_close {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	cursor: pointer;
+	font-size: 2em;
+	color: #7a778d;
+}
+
+.sidebar__nav {
+	display: flex;
+	align-items: center;
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+.sidebar__nav--active {
+	color: var(--accent);
+}
+.sidebar__nav li {
+	cursor: pointer;
+}
+.sidebar__nav li:not(:first-child) {
+	margin-left: 2rem;
+}
+
+.sidebar__contact-title {
+	font-size: 2.25em;
+	font-weight: 600;
+}
+
+.sidebar__contact-data {
+	margin-top: 1.25rem;
+}
+
+.sidebar__contact-data p {
+	font-size: 1.25em;
+	color: #7a778d;
+}
+.sidebar__contact-data p:not(:first-child) {
+	margin-top: 0.7rem;
+}
