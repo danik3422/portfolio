@@ -58,7 +58,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 						<img src={linkedin} alt='Linkedin logo' />
 					</a>
 					<a
-						href='https://www.linkedin.com/in/danylo-syloats-a31704199/'
+						href='https://www.upwork.com/freelancers/~01daaa094ab4ca6172'
 						target='__blank'
 						rel='noopener norefferer'
 					>

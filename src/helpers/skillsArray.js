@@ -15,42 +15,52 @@ import yarn from './../img/icons/yarn.svg'
 const frontSkills = [
 	{
 		logo: js,
+		name: 'Java Script',
 		alt: 'Java Script logo',
 	},
 	{
 		logo: react,
+		name: 'ReactJS',
 		alt: 'ReactJS logo',
 	},
 	{
 		logo: redux,
+		name: 'Redux',
 		alt: 'Redux logo',
 	},
 	{
 		logo: html,
+		name: 'HTML',
 		alt: 'HTML logo',
 	},
 	{
 		logo: css,
+		name: 'CSS',
 		alt: 'CSS logo',
 	},
 	{
 		logo: npm,
+		name: 'NPM',
 		alt: 'NPM logo',
 	},
 	{
 		logo: bootstrap,
+		name: 'BootStrap',
 		alt: 'BootStrap logo',
 	},
 	{
 		logo: material,
+		name: 'MaterialUI',
 		alt: 'MaterialUI logo',
 	},
 	{
 		logo: yarn,
+		name: 'Yarn',
 		alt: 'Yarn logo',
 	},
 	{
 		logo: styledcomponents,
+		name: 'StyledComponents',
 		alt: 'StyledComponents logo',
 	},
 ]
