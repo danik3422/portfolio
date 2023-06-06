@@ -1,4 +1,5 @@
-import gitIcon from './../../img/icons/gitHub-black.svg'
+import gitIconBlack from './../../img/icons/gitHub-black.svg'
+import './style.css'
 const BtnGitHub = (props) => {
 	return (
 		<a
@@ -7,7 +8,7 @@ const BtnGitHub = (props) => {
 			rel='noreferrer'
 			className='btn-outline'
 		>
-			<img src={gitIcon} alt='' />
+			<img src={gitIconBlack} alt='' />
 			GitHub repo
 		</a>
 	)

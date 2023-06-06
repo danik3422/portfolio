@@ -16,11 +16,9 @@ font-family: 'Poppins', sans-serif;
 	--black-border: #26292d;
 	--white: #fff;
 	--purple: #5c62ec;
-
+	--white-border: #fff;
 	--text-color: var(--black);
 
-	--dark-bg: var(--black);
-	--dark-border: var(--black-border);
 	--header-text: var(--white);
 	--accent: var(--purple);
 
@@ -29,7 +27,11 @@ font-family: 'Poppins', sans-serif;
 	--text-color: var(--black);
 	--secondary-text: #7a778d;
 	--title-1: var(--accent);
-
+	--dark-bg: var(--white);
+	--switch-bg: #27272767;
+	--header-text: var(--black);
+	--dark-border: var(--white-border);
+	--gitHub: transparent;
 	--project-card-bg: var(--white);
 	--project-card-text: var(--black);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
@@ -41,7 +43,10 @@ font-family: 'Poppins', sans-serif;
 	--text-color: var(--white);
 	--secondary-text: #7a778d;
 	--title-1: var(--white);
-
+	--dark-bg: var(--black);
+	--header-text: var(--white);
+	--switch-bg: #272727;
+	--dark-border: var(--black-border);
 	--project-card-bg: var(--black);
 	--project-card-text: var(--white);
 	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
@@ -112,14 +117,12 @@ body::-webkit-scrollbar {
 	display: inline-block;
 	height: 48px;
 	padding: 12px 28px;
-
 	border-radius: 5px;
 	background-color: var(--accent);
-	color: var(--white);
+	color: inherit;
 	letter-spacing: 0.15px;
 	font-size: 16px;
 	font-weight: 500;
-
 	transition: opacity 0.2s ease-in;
 }
 
@@ -128,33 +131,6 @@ body::-webkit-scrollbar {
 }
 
 .btn:active {
-	position: relative;
-	top: 1px;
-}
-
-/* Btn outline */
-
-.btn-outline {
-	display: flex;
-	column-gap: 10px;
-	align-items: center;
-
-	height: 48px;
-	padding: 12px 20px;
-
-	border-radius: 5px;
-	border: 1px solid var(--blackpure);
-	background-color: var(--white);
-	color: var(--blackpure);
-
-	transition: opacity 0.2s ease-in;
-}
-
-.btn-outline:hover {
-	opacity: 0.8;
-}
-
-.btn-outline:active {
 	position: relative;
 	top: 1px;
 }
@@ -333,4 +309,7 @@ body::-webkit-scrollbar {
 	.social__item {
 		width: 28px;
 	}
+}
+.tooltip {
+	z-index: 2;
 }
