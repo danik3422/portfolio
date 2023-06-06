@@ -1,20 +1,11 @@
-import { useState } from 'react'
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode'
 import './style.css'
 
 import { NavLink } from 'react-router-dom'
 
-const Navigation = () => {
+const Navigation = ({ onClick }) => {
 	const notActiveLink = 'nav-list__link'
 	const activeLink = 'nav-list__link nav-list__link--active'
-	const [modalActive, setActiveModal] = useState(false)
-	const modalHandler = () => {
-		if (modalActive !== true) {
-			setActiveModal(true)
-		} else {
-			setActiveModal(false)
-		}
-	}
 
 	return (
 		<nav className='nav'>
@@ -47,11 +38,10 @@ const Navigation = () => {
 								Projects
 							</NavLink>
 						</li>
-						{/* <NavLink to='/' className='nav-list__link'> */}
-						<li className='btn nav-list__item--contact' onClick={modalHandler}>
+
+						<li className='btn nav-list__item--contact' onClick={onClick}>
 							Contacts
 						</li>
-						{/* </NavLink> */}
 					</ul>
 				</div>
 			</div>
