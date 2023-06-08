@@ -1,19 +1,17 @@
 .header {
 	padding: 40px 0;
-	min-height: 695px;
-
+	min-height: 700px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-
-	color: var(--header-text);
+	color: var(--white);
 	text-align: center;
-	z-index: 1;
 }
 
 .header__wrapper {
 	padding: 0 15px;
 	max-width: 660px;
+	z-index: 1;
 }
 
 .header__title {

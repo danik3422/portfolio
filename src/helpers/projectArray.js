@@ -1,27 +1,24 @@
+import calorie from './../img/project/calorie-app.png'
+import film from './../img/project/film-app.png'
+import github from './../img/project/github-finder.png'
 const projects = [
 	{
-		title: 'Gaming streaming portal',
-		skills: 'React, Node.js, MongoDB',
-		img: 'picture',
-		gitHubLink: 's',
+		title: 'Calories Tracker',
+		skills: 'HTML, SCSS, JavaScript',
+		img: calorie,
+		gitHubLink: 'https://github.com/danik3422/Calories-Tracker',
 	},
 	{
-		title: ' streaming portal',
-		skills: 'React, Node.js, MongoDB',
-		img: 'picture',
-		gitHubLink: 's',
+		title: 'GitHub-Finder',
+		skills: 'HTML, SCSS, JavaScript',
+		img: github,
+		gitHubLink: 'https://github.com/danik3422/GitHub-Finder',
 	},
 	{
-		title: 'portal',
-		skills: 'React, Node.js, MongoDB',
-		img: 'picture',
-		gitHubLink: '',
-	},
-	{
-		title: '123',
-		skills: 'React, Node.js, MongoDB',
-		img: 'picture',
-		gitHubLink: '',
+		title: 'Film App',
+		skills: 'HTML, SCSS, JavaScript',
+		img: film,
+		gitHubLink: 'https://github.com/danik3422/film-app',
 	},
 ]
 

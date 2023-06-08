@@ -10,9 +10,10 @@ const Home = () => {
 					<div className='content-list'>
 						<h2 className='title-2'>Frontend</h2>
 						<ul className='content-list__logo'>
-							{frontSkills.map((skills) => {
+							{frontSkills.map((skills, index) => {
 								return (
 									<Tooltip
+										key={index}
 										title={skills.name}
 										position='top'
 										trigger='mouseenter'
@@ -30,9 +31,10 @@ const Home = () => {
 						</ul>
 						<h2 className='title-2'>Backend</h2>
 						<ul className='content-list__logo'>
-							{backSkills.map((skills) => {
+							{backSkills.map((skills, index) => {
 								return (
 									<Tooltip
+										key={index}
 										title={skills.alt}
 										position='top'
 										trigger='mouseenter'

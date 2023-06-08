@@ -4,13 +4,7 @@ import { loadFull } from 'tsparticles'
 import './style.css'
 const Fragments = (props) => {
 	const particlesInit = useCallback(async (engine) => {
-		console.log(engine)
-
 		await loadFull(engine)
-	}, [])
-
-	const particlesLoaded = useCallback(async (container) => {
-		await console.log(container)
 	}, [])
 
 	return (
@@ -19,7 +13,6 @@ const Fragments = (props) => {
 				className='particles'
 				id='tsparticles'
 				init={particlesInit}
-				loaded={particlesLoaded}
 				options={{
 					background: {
 						color: {
@@ -41,11 +34,11 @@ const Fragments = (props) => {
 						},
 						modes: {
 							push: {
-								quantity: 3,
+								quantity: 2,
 							},
 							repulse: {
 								distance: 200,
-								duration: 0.4,
+								duration: 0.2,
 							},
 						},
 					},
@@ -70,7 +63,7 @@ const Fragments = (props) => {
 								default: 'bounce',
 							},
 							random: false,
-							speed: 6,
+							speed: 3,
 							straight: false,
 						},
 						number: {

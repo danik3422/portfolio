@@ -1,10 +1,11 @@
 import Fragments from '../fragments/Fragments'
+import pdf from './cv/file.pdf'
 import './style.css'
 const Header = () => {
 	return (
 		<>
-			<Fragments>
-				<header className='header'>
+			<header className='header'>
+				<Fragments>
 					<div className='header__wrapper'>
 						<h1 className='header__title'>
 							<strong>
@@ -15,12 +16,18 @@ const Header = () => {
 						<div className='header__text'>
 							<p>with passion for learning and creating.</p>
 						</div>
-						<a href='#!' className='btn'>
+						<a
+							href={pdf}
+							download='Danylo_Syloats_CV'
+							target='_blank'
+							rel='noreferrer'
+							className='btn'
+						>
 							Download CV
 						</a>
 					</div>
-				</header>
-			</Fragments>
+				</Fragments>
+			</header>
 		</>
 	)
 }
