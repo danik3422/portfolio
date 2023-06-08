@@ -6,10 +6,6 @@ font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
 */
 
-/* * {
-    border: 1px solid red;
-} */
-
 :root {
 	--blackpure: #000;
 	--black: #171718;
@@ -190,7 +186,7 @@ body::-webkit-scrollbar {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 15px;
+	gap: 25px;
 	margin-bottom: 40px;
 }
 .content-list__logo:last-child {
@@ -298,16 +294,6 @@ body::-webkit-scrollbar {
 
 	.footer__wrapper {
 		row-gap: 20px;
-	}
-
-	/* Social */
-
-	.social {
-		column-gap: 20px;
-	}
-
-	.social__item {
-		width: 28px;
 	}
 }
 .tooltip {
