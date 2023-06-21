@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import BtnGitHub from '../components/btnGitHub/BtnGitHub'
 
+import BtnSiteLink from '../components/btnSiteLink/BtnSiteLink'
 import { projects } from '../helpers/projectArray'
 
 const Project = () => {
@@ -22,8 +23,10 @@ const Project = () => {
 					<div className='project-details__desc'>
 						<p>Skills: {project.skills}</p>
 					</div>
-
-					{project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
+					<div className='project-details__buttons'>
+						{project.gitHubLink && <BtnGitHub link={project.gitHubLink} />}
+						{project.webSiteLink && <BtnSiteLink link={project.webSiteLink} />}
+					</div>
 				</div>
 			</div>
 		</main>

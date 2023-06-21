@@ -146,7 +146,6 @@ body::-webkit-scrollbar {
 .project-details {
 	margin: 0 auto;
 	max-width: 865px;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -170,6 +169,11 @@ body::-webkit-scrollbar {
 	line-height: 1.3;
 }
 
+.project-details__buttons {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
 /* Content list */
 
 .content-list {
@@ -299,3 +303,11 @@ body::-webkit-scrollbar {
 .tooltip {
 	z-index: 2;
 }
+
+/* Particles */
+/* #tsparticles {
+	width: 40% !important;
+}
+canvas {
+	width: 40% !important;
+} */
