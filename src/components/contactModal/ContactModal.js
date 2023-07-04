@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import github from './../../img/icons/github-modal.svg'
 import linkedin from './../../img/icons/linkedin-modal.svg'
 import upwork from './../../img/icons/upwork.svg'
 import './style.css'
 const ContactModal = ({ isOpen, onClose }) => {
 	const [isClosing, setIsClosing] = useState(false)
+	const { t } = useTranslation(['contact'])
 
 	const handleClose = () => {
 		setIsClosing(true)
@@ -38,12 +40,11 @@ const ContactModal = ({ isOpen, onClose }) => {
 					<path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'></path>
 				</svg>
 				<ul className='sidebar__nav'>
-					<li className='sidebar__item--active'>Contact</li>
+					<li className='sidebar__item--active'>{t('contact')}</li>
+					<li className='sidebar__item'>{t('about')}</li>
 				</ul>
 				<div className='sidebar__contact'>
-					<h1 className='sidebar__contact-title'>
-						Let's Build Something <br /> Together
-					</h1>
+					<h1 className='sidebar__contact-title'>{t('title')}</h1>
 					<div className='sidebar__contact-data'>
 						<p>danylo.syloats@gmail.com</p>
 						<p>Warsaw, Poland</p>
