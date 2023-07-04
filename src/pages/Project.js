@@ -6,6 +6,7 @@ import { projects } from '../helpers/projectArray'
 
 const Project = () => {
 	const { id } = useParams()
+
 	const project = projects[id]
 
 	return (

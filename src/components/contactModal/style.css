@@ -97,6 +97,7 @@
 }
 
 .sidebar__contact-title {
+	max-width: 290px;
 	font-size: 2.25em;
 	font-weight: 600;
 	color: var(--text-color);

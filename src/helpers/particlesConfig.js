@@ -1,4 +1,5 @@
 const particlesConfig = {
+	debugger: 'false',
 	background: {
 		color: {
 			value: '#0d47a1',

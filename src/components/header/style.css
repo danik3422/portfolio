@@ -10,7 +10,7 @@
 
 .header__wrapper {
 	padding: 0 15px;
-	max-width: 660px;
+	/* max-width: 660px; */
 	z-index: 1;
 }
 

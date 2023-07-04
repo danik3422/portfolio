@@ -1,6 +1,6 @@
 import './styles/main.css'
 
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ContactModal from './components/contactModal/ContactModal'
 import Footer from './components/footer/Footer'
@@ -23,22 +23,24 @@ function App() {
 	}
 
 	return (
-		<div className='App'>
-			<BrowserRouter>
-				<ScrollToTop />
-				<Navigation onClick={handleOpenModal} />
+		<Suspense fallback={null}>
+			<div className='App'>
+				<BrowserRouter>
+					<ScrollToTop />
+					<Navigation onClick={handleOpenModal} />
 
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/projects' element={<Projects />} />
-					<Route path='/project/:id' element={<Project />} />
-				</Routes>
-				<Footer />
-			</BrowserRouter>
-			{modalActive && (
-				<ContactModal isOpen={modalActive} onClose={handleCloseModal} />
-			)}
-		</div>
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/projects' element={<Projects />} />
+						<Route path='/project/:id' element={<Project />} />
+					</Routes>
+					<Footer />
+				</BrowserRouter>
+				{modalActive && (
+					<ContactModal isOpen={modalActive} onClose={handleCloseModal} />
+				)}
+			</div>
+		</Suspense>
 	)
 }
 

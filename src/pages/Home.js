@@ -1,12 +1,16 @@
+import { useTranslation } from 'react-i18next'
 import { Tooltip } from 'react-tippy'
 import ParticlesBackground from '../components/ParticlesBackground/ParticlesBackground'
 import Header from '../components/header/Header'
 import { backSkills, frontSkills } from '../helpers/skillsArray'
 const Home = () => {
+	const { t } = useTranslation(['home'])
+
 	return (
 		<>
 			<Header />
 			<ParticlesBackground />
+
 			<main className='section'>
 				<div className='container'>
 					<div className='content-list'>
