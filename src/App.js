@@ -25,20 +25,22 @@ function App() {
 	return (
 		<Suspense fallback={null}>
 			<div className='App'>
-				<BrowserRouter>
-					<ScrollToTop />
-					<Navigation onClick={handleOpenModal} />
+				<div className='app-container'>
+					<BrowserRouter>
+						<ScrollToTop />
+						<Navigation onClick={handleOpenModal} />
 
-					<Routes>
-						<Route path='/' element={<Home />} />
-						<Route path='/projects' element={<Projects />} />
-						<Route path='/project/:id' element={<Project />} />
-					</Routes>
-					<Footer />
-				</BrowserRouter>
-				{modalActive && (
-					<ContactModal isOpen={modalActive} onClose={handleCloseModal} />
-				)}
+						<Routes>
+							<Route path='/' element={<Home />} />
+							<Route path='/projects' element={<Projects />} />
+							<Route path='/project/:id' element={<Project />} />
+						</Routes>
+						<Footer />
+					</BrowserRouter>
+					{modalActive && (
+						<ContactModal isOpen={modalActive} onClose={handleCloseModal} />
+					)}
+				</div>
 			</div>
 		</Suspense>
 	)
