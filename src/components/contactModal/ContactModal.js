@@ -3,11 +3,13 @@ import { useTranslation } from 'react-i18next'
 import github from './../../img/icons/github-modal.svg'
 import linkedin from './../../img/icons/linkedin-modal.svg'
 import upwork from './../../img/icons/upwork.svg'
+import About from './about/About'
+import Contact from './contact/Contact'
 import './style.css'
 const ContactModal = ({ isOpen, onClose }) => {
 	const [isClosing, setIsClosing] = useState(false)
+	const [tab, setTab] = useState('contact')
 	const { t } = useTranslation(['contact'])
-
 	const handleClose = () => {
 		setIsClosing(true)
 		setTimeout(() => {
@@ -15,6 +17,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 			onClose()
 		}, 300)
 	}
+
 	if (!isOpen) {
 		return null
 	}
@@ -40,16 +43,29 @@ const ContactModal = ({ isOpen, onClose }) => {
 					<path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'></path>
 				</svg>
 				<ul className='sidebar__nav'>
-					<li className='sidebar__item--active'>{t('contact')}</li>
-					<li className='sidebar__item'>{t('about')}</li>
+					<li
+						className={tab === 'contact' ? 'sidebar__item--active' : ''}
+						onClick={() => setTab('contact')}
+					>
+						{t('contact')}
+					</li>
+					<li
+						className={tab === 'about' ? 'sidebar__item--active' : ''}
+						onClick={() => setTab('about')}
+					>
+						{t('about')}
+					</li>
 				</ul>
-				<div className='sidebar__contact'>
-					<h1 className='sidebar__contact-title'>{t('title')}</h1>
-					<div className='sidebar__contact-data'>
-						<p>danylo.syloats@gmail.com</p>
-						<p>Warsaw, Poland</p>
-					</div>
-				</div>
+
+				{tab === 'contact' ? (
+					<Contact text={t('title')} />
+				) : (
+					<About
+						title={t('about-title')}
+						text={t('about-text')}
+						stack={t('about-stack')}
+					/>
+				)}
 				<div className='sidebar__footer'>
 					<a
 						href='https://www.linkedin.com/in/danylo-syloats-a31704199/'

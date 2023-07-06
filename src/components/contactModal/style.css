@@ -97,7 +97,7 @@
 }
 
 .sidebar__contact-title {
-	max-width: 290px;
+	max-width: 267px;
 	font-size: 2.25em;
 	font-weight: 600;
 	color: var(--text-color);
@@ -108,7 +108,7 @@
 }
 
 .sidebar__contact-data p {
-	font-size: 1.25em;
+	letter-spacing: 1px;
 	color: #7a778d;
 }
 .sidebar__contact-data p:not(:first-child) {

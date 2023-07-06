@@ -1,23 +1,30 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai'
+import { NavLink } from 'react-router-dom'
 import BtnDarkMode from '../btnDarkMode/BtnDarkMode'
 import './style.css'
-
-import { NavLink } from 'react-router-dom'
 
 const Navigation = ({ onClick }) => {
 	const notActiveLink = 'nav-list__link'
 	const activeLink = 'nav-list__link nav-list__link--active'
 	const { i18n, t } = useTranslation(['common'])
-
+	const [mobileNav, setMobileNav] = useState(false)
 	const handleLanguageChange = (e) => {
 		i18n.changeLanguage(e.target.value)
 	}
+
+	const handleMobile = () => {
+		setMobileNav(!mobileNav)
+		document.body.style.overflowY = `${mobileNav ? 'visible' : 'hidden'}`
+	}
+
 	return (
 		<nav className='nav'>
 			<div className='container'>
 				<div className='nav-row'>
 					<NavLink to='/' className='logo'>
-						<strong>Web Developer</strong> portfolio
+						<strong>DS</strong>
 					</NavLink>
 
 					<BtnDarkMode />
@@ -30,8 +37,8 @@ const Navigation = ({ onClick }) => {
 						<option value='uk'>UKR</option>
 					</select>
 
-					<ul className='nav-list'>
-						<li className='nav-list__item'>
+					<ul className={mobileNav ? 'nav-list active' : 'nav-list'}>
+						{/* <li className='nav-list__item'>
 							<NavLink
 								to='/'
 								className={({ isActive }) =>
@@ -40,9 +47,10 @@ const Navigation = ({ onClick }) => {
 							>
 								{t('home')}
 							</NavLink>
-						</li>
+						</li> */}
 						<li className='nav-list__item'>
 							<NavLink
+								onClick={handleMobile}
 								to='/projects'
 								className={({ isActive }) =>
 									isActive ? activeLink : notActiveLink
@@ -56,6 +64,13 @@ const Navigation = ({ onClick }) => {
 							{t('contact')}
 						</button>
 					</ul>
+					<div onClick={handleMobile} className='mobile-btn'>
+						{mobileNav ? (
+							<AiOutlineClose size={25} />
+						) : (
+							<AiOutlineMenu size={25} />
+						)}
+					</div>
 				</div>
 			</div>
 		</nav>
