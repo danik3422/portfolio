@@ -64,6 +64,7 @@ const Navigation = ({ onClick }) => {
 							{t('contact')}
 						</button>
 					</ul>
+
 					<div onClick={handleMobile} className='mobile-btn'>
 						{mobileNav ? (
 							<AiOutlineClose size={25} />
