@@ -50,7 +50,6 @@ const Navigation = ({ onClick }) => {
 						</li> */}
 						<li className='nav-list__item'>
 							<NavLink
-								onClick={handleMobile}
 								to='/projects'
 								className={({ isActive }) =>
 									isActive ? activeLink : notActiveLink
