@@ -63,14 +63,13 @@ const Navigation = ({ onClick }) => {
 						<button className='btn nav-list__item--contact' onClick={onClick}>
 							{t('contact')}
 						</button>
+						<div onClick={handleMobile} className='mobile-btn'>
+							{mobileNav ? <AiOutlineClose size={25} /> : ''}
+						</div>
 					</ul>
 
 					<div onClick={handleMobile} className='mobile-btn'>
-						{mobileNav ? (
-							<AiOutlineClose size={25} />
-						) : (
-							<AiOutlineMenu size={25} />
-						)}
+						{mobileNav ? '' : <AiOutlineMenu size={25} />}
 					</div>
 				</div>
 			</div>

@@ -86,7 +86,7 @@
 		position: absolute;
 		right: 10px;
 		top: 27px;
-		z-index: 10;
+		/* z-index: 10; */
 	}
 	select {
 		margin-right: 30px;
