@@ -16,7 +16,6 @@ const Navigation = ({ onClick }) => {
 
 	const handleMobile = () => {
 		setMobileNav(!mobileNav)
-		document.body.style.overflowY = `${mobileNav ? 'visible' : 'hidden'}`
 	}
 
 	return (
@@ -50,6 +49,7 @@ const Navigation = ({ onClick }) => {
 						</li> */}
 						<li className='nav-list__item'>
 							<NavLink
+								onClick={handleMobile}
 								to='/projects'
 								className={({ isActive }) =>
 									isActive ? activeLink : notActiveLink
@@ -59,7 +59,13 @@ const Navigation = ({ onClick }) => {
 							</NavLink>
 						</li>
 
-						<button className='btn nav-list__item--contact' onClick={onClick}>
+						<button
+							className='btn nav-list__item--contact'
+							onClick={() => {
+								onClick()
+								handleMobile()
+							}}
+						>
 							{t('contact')}
 						</button>
 						<div onClick={handleMobile} className='mobile-btn'>
