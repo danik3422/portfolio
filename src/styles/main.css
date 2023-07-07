@@ -66,11 +66,12 @@ body::-webkit-scrollbar {
 }
 
 .App {
-	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 .app-container {
+	display: flex;
+	flex-direction: column;
 	z-index: 1;
 }
 
