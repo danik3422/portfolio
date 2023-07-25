@@ -1,0 +1,39 @@
+.lang-selector {
+	position: relative;
+}
+.lang-selector-item {
+	height: 48px;
+	width: 88px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 100px;
+	font-size: 24px;
+	transition: border-color 0.3s ease;
+	color: rgba(241, 82, 111, 0.925);
+}
+
+/* Language Changes */
+.lang-selector-item-pl {
+	--lang-active-color: #f1526f;
+	--lang-hover-color: #f1526f;
+}
+.lang-selector-item-eng {
+}
+
+.lang-selector-item-ukr {
+}
+/* Dropdown */
+.lang-selector-dropdown {
+	position: absolute;
+	top: 100%;
+	margin-top: 8px;
+	right: 0;
+	z-index: 200;
+	padding: 0;
+	background: #fff;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	border-radius: 24px;
+	width: 208px;
+}
