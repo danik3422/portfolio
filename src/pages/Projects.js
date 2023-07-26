@@ -13,7 +13,7 @@ const Projects = () => {
 
 	useEffect(() => {
 		axios
-			.get('http://localhost:3001/projects')
+			.get('/.netlify/functions/projects')
 			.then((response) => {
 				setProjects(response.data)
 				setLoading(false)
